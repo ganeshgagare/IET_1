@@ -1,0 +1,111 @@
+
+// 1
+#include <iostream>
+using namespace std;
+
+int main() {
+    int n = 5; 
+    for (int i = 1; i <= n; i++) {
+        // spaces
+        for (int j = i; j < n; j++) cout << "  ";
+        
+        // increasing numbers
+        int num = i;
+        for (int j = 1; j <= i; j++) {
+            cout << num << " ";
+            num++;
+        }
+        
+        // decreasing numbers
+        num -= 2;
+        for (int j = 1; j < i; j++) {
+            cout << num << " ";
+            num--;
+        }
+        cout << endl;
+    }
+    return 0;
+}
+
+
+
+// 2
+#include <iostream>
+using namespace std;
+
+int main() {
+    int n = 5;
+    for (int i = n; i >= 1; i--) {
+        // spaces
+        for (int j = n; j > i; j--) cout << "  ";
+        
+        // stars
+        for (int j = 1; j <= (2 * i - 1); j++) cout << "* ";
+        
+        cout << endl;
+    }
+    return 0;
+}
+
+
+
+//3
+#include <iostream>
+using namespace std;
+
+int main() {
+    int n = 6;
+    for (int i = 0; i < n; i++) {
+        int num = 1;
+        
+        // spaces
+        for (int j = 0; j < n - i; j++) cout << "  ";
+        
+        // numbers in row
+        for (int j = 0; j <= i; j++) {
+            cout << num << "   ";
+            num = num * (i - j) / (j + 1);
+        }
+        cout << endl;
+    }
+    return 0;
+}
+
+
+
+//4
+#include <iostream>
+using namespace std;
+
+int main() {
+    int n = 5;
+    for (int i = 1; i <= n; i++) {
+        char ch = 'A' + i - 1;
+        for (int j = 1; j <= i; j++) {
+            cout << ch << " ";
+        }
+        cout << endl;
+    }
+    return 0;
+}
+
+
+
+//5
+#include <iostream>
+using namespace std;
+
+int main() {
+    int n = 5;
+    for (int i = 1; i <= n; i++) {
+        // spaces
+        for (int j = i; j < n; j++) cout << "  ";
+        
+        // alphabets
+        for (char ch = 'A'; ch < 'A' + (2 * i - 1); ch++) {
+            cout << ch << " ";
+        }
+        cout << endl;
+    }
+    return 0;
+}
