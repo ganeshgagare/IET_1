@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<body>
+<a href="Calculate.html">Go to Calculate</a>
+
+<iframe srcdoc='
+  <h1>Current Date and Time</h1>
+  <div id="time"></div>
+  <script>
+    function updateTime() {
+      const now = new Date();
+      document.getElementById("time").textContent = now.toString();
+    }
+    setInterval(updateTime, 1000);
+    updateTime();
+  </script>
+  
+'></iframe>
+
+</body>
+</html>
